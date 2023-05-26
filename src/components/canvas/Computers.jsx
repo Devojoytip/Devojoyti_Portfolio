@@ -25,6 +25,13 @@ const Computers = ({ isMobile }) => {
         position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
         rotation={[-0.01, -0.2, -0.1]}
       />
+      <OrbitControls
+        enableZoom={false}
+        maxPolarAngle={Math.PI / 2}
+        minPolarAngle={Math.PI / 2}
+        autoRotate
+
+      />
     </mesh>
   );
 };
@@ -62,11 +69,36 @@ const ComputersCanvas = () => {
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
+        {/* <OrbitControls
+          enableZoom={false}
+          maxPolarAngle={Math.PI / 2}
+          minPolarAngle={Math.PI / 2}
+          onUpdate={(controls) => {
+            const angleStep = Math.PI / 18; // 10 degrees in radians
+            const targetAngle = angleStep * Math.floor(controls.getAzimuthalAngle() / angleStep) + angleStep;
+            controls.rotateTo(targetAngle, controls.getPolarAngle(), true);
+          }}
+        /> */}
+
+
         <OrbitControls
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
+          autoRotate
+          autoRotateSpeed={0.2}
         />
+        {/* <OrbitControls
+          autoRotate
+          enableZoom={false}
+          maxPolarAngle={Math.PI / 2}
+          minPolarAngle={Math.PI / 2}
+          rotateSpeed={0.02} // Adjust the rotate speed as per your preference
+          targetRotation={Math.PI / 18} // Rotate 10 degrees to the left (in radians)
+          maxAzimuthAngle={Math.PI / 18} // Limit rotation to 10 degrees left
+          minAzimuthAngle={-Math.PI / 18} // Limit rotation to 10 degrees right
+        /> */}
+
         <Computers isMobile={isMobile} />
       </Suspense>
 

@@ -3,6 +3,8 @@ import {
     backend,
     creator,
     web,
+    cpp,
+    java,
     javascript,
     typescript,
     html,
@@ -60,6 +62,14 @@ const services = [
 ];
 
 const technologies = [
+    {
+        name: "CPP",
+        icon: cpp,
+    },
+    {
+        name: "Java",
+        icon: java,
+    },
     {
         name: "HTML 5",
         icon: html,

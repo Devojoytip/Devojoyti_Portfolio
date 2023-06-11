@@ -10,6 +10,12 @@ import close from "./close.svg";
 
 import cpp from "./tech/icons8-c-240.png";
 import java from "./tech/icons8-java-240.png";
+import sql from "./tech/sql.png";
+import mysql from "./tech/icons8-mysql-logo-240.png";
+import pgsql from "./tech/icons8-postgresql-240.png";
+import firebase from "./tech/icons8-firebase-240.png";
+import php from "./tech/icons8-php-240.png";
+import bootstrap from "./tech/icons8-bootstrap-240.png";
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";
@@ -53,6 +59,12 @@ export {
   javascript,
   mongodb,
   nodejs,
+  sql,
+  pgsql,
+  mysql,
+  php,
+  firebase,
+  bootstrap,
   reactjs,
   redux,
   tailwind,

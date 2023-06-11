@@ -14,6 +14,12 @@ import {
     tailwind,
     nodejs,
     mongodb,
+    sql,
+    pgsql,
+    mysql,
+    php,
+    firebase,
+    bootstrap,
     git,
     figma,
     docker,
@@ -101,6 +107,30 @@ const technologies = [
     {
         name: "MongoDB",
         icon: mongodb,
+    },
+    {
+        name: "Sql",
+        icon: sql,
+    },
+    {
+        name: "PostgreSql",
+        icon: pgsql,
+    },
+    {
+        name: "MySql",
+        icon: mysql,
+    },
+    {
+        name: "Php",
+        icon: php,
+    },
+    {
+        name: "Firebase",
+        icon: firebase,
+    },
+    {
+        name: "Bootstrap",
+        icon: bootstrap,
     },
     {
         name: "git",

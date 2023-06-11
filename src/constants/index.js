@@ -97,10 +97,6 @@ const technologies = [
         icon: redux,
     },
     {
-        name: "Tailwind CSS",
-        icon: tailwind,
-    },
-    {
         name: "Node JS",
         icon: nodejs,
     },
@@ -127,6 +123,10 @@ const technologies = [
     {
         name: "Firebase",
         icon: firebase,
+    },
+    {
+        name: "Tailwind CSS",
+        icon: tailwind,
     },
     {
         name: "Bootstrap",

@@ -1,6 +1,8 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import Button from '@mui/material/Button';
+import SendIcon from '@mui/icons-material/Send';
 
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
@@ -33,19 +35,16 @@ const Contact = () => {
 
     emailjs
       .send(
-        // import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-        // import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-        'service_8t9fekn',
-        'template_612d8u8',
+        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "Devojoyti Pal",
+          to_name: import.meta.env.VITE_APP_EMAILJS_USER_NAME,
           from_email: form.email,
-          to_email: "paldevojoyti@gmail.com",
+          to_email: import.meta.env.VITE_APP_EMAILJS_USER_EMAIL,
           message: form.message,
         },
-        '8lGmMJoaPu-WvaAZT'
-        // import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {
@@ -117,12 +116,13 @@ const Contact = () => {
             />
           </label>
 
-          <button
+          <Button variant="contained" color="success"
             type='submit'
             className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
+            startIcon={<SendIcon />}
           >
             {loading ? "Sending..." : "Send"}
-          </button>
+          </Button>
         </form>
       </motion.div>
 
